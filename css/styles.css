@@ -1,0 +1,206 @@
+html, body {
+	line-height: 1.3em;
+	font-size: 14px;
+	font: Arial;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 400px;
+	min-width: 600px;
+}
+
+header, footer {
+	background-color: #D2D2D2;
+	flex-shrink: 0;
+	line-height: 50px;
+	text-align: center;
+}
+
+main {
+	flex: 1 100%;
+	background-image: url(../img/background.png);
+	background-size: auto 100%;
+}
+
+.container {
+	width: 660px;
+	height: 100%;
+	margin: 0 auto;
+	background: rgba(158, 129, 74, 0.4);
+	overflow: hidden;
+}
+
+.game-panels {
+	display: flex;
+	margin: 20px auto;
+	width: 96%;
+	height: 460px;
+}
+
+.game-controls {
+	width: 28%;
+	margin-right: 3%;
+}
+
+.game-controls > div {
+	margin-bottom: 20px;
+}
+
+.game-infobar {
+	display: flex; /* To remove space between inline-block elements */
+	height: 25px;
+	line-height: 25px;
+	background-color: grey;
+	border: 1px solid black;
+}
+
+.game-infobar-value {
+	display: inline-block;
+	width: 60%;
+	text-align: right;
+	padding-right: 5px;
+	background-color: white;
+}
+
+.game-infobar-title {
+	display: inline-block;
+	width: 40%;
+	font-weight: bold;
+	padding-left: 5px;
+	background-color: #B7B4A9;
+}
+
+.game-control {
+	position: relative;
+	height: 220px;
+	border-radius: 75px;
+	background-color: #B7B4A9;
+	border: 1px solid black;
+}
+
+.game-control div {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: white;
+	text-align: center;
+	line-height: 50px;
+}
+
+#game-button-up {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+#game-button-left {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	left: 25px;
+}
+
+#game-button-right {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	right: 25px;
+}
+
+#game-button-down {
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+#game-window {
+	position: relative;
+	width: 72%;
+	height: 440px;
+	background-color: white;
+	overflow: hidden;
+}
+
+.game-cell {
+	position: absolute;
+	background-size: 100%;
+}
+
+.game-cell:after {
+	content: '';
+	position: absolute;
+	width: calc(100% - 1px);
+	height: calc(100% - 1px);
+	border-width: 0px 1px 1px 0px;
+	border-style: dashed;
+	border-color: rgba(0, 0, 0, 0.15);
+}
+
+.game-snake-head {
+	position: absolute;
+	background-color: rgba(0, 0, 255, 0.2);
+}
+
+.game-snake-head:after {
+	content: '';
+	position: absolute;
+	width: 300%;
+	height: 300%;
+	top: -50%;
+	left: -50%;
+	margin: -50% -50%;
+	background-image: url(../img/ash.png);
+	background-position-x: center;
+	background-position-y: 20%;
+	background-repeat: no-repeat;
+	background-size: 65%;
+}
+
+.game-snake-tail {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 90px;
+	left: 90px;
+	background-color: rgba(0, 255, 0, 0.2);
+}
+
+.game-snake-tail:after {
+	content: '';
+	position: absolute;
+	width: 300%;
+	height: 300%;
+	top: -50%;
+	left: -50%;
+	margin: -50% -50%;
+	background-position-x: center;
+	background-position-y: center;
+	background-repeat: no-repeat;
+	background-size: 60%;
+	transform: scaleX(-1);
+}
+
+.game-snake-tail-1:after {background-image: url(../img/pokemons/001.png)}
+.game-snake-tail-2:after {background-image: url(../img/pokemons/002.png)}
+.game-snake-tail-3:after {background-image: url(../img/pokemons/003.png)}
+.game-snake-tail-4:after {background-image: url(../img/pokemons/004.png)}
+.game-snake-tail-5:after {background-image: url(../img/pokemons/005.png)}
+.game-snake-tail-6:after {background-image: url(../img/pokemons/006.png)}
+.game-snake-tail-7:after {background-image: url(../img/pokemons/007.png)}
+.game-snake-tail-8:after {background-image: url(../img/pokemons/008.png)}
+.game-snake-tail-9:after {background-image: url(../img/pokemons/009.png)}
+.game-snake-tail-10:after {background-image: url(../img/pokemons/010.png)}
+.game-snake-tail-11:after {background-image: url(../img/pokemons/011.png)}
+.game-snake-tail-12:after {background-image: url(../img/pokemons/012.png)}
+.game-snake-tail-13:after {background-image: url(../img/pokemons/013.png)}
+
+
+
+
